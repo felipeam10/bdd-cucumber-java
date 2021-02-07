@@ -94,15 +94,15 @@ public class PropondoLanceSteps {
 	
 	@Dado("dois lances")
 	public void dois_lances(DataTable dataTable) {
-	   List<Map<String, String>> valores = dataTable.asMaps();
-	   for (Map<String, String> mapa : valores) {
-		   
-		   String valor = mapa.get("valor");
-		   String nome = mapa.get("nomeUsuario");
-		   
-		   Lance lance = new Lance(new Usuario(nome), new BigDecimal(valor));
-		   lista.add(lance);
-	}
+		List<Map<String, String>> valores = dataTable.asMaps();
+		for (Map<String, String> mapa : valores) {
+
+			String valor = mapa.get("valor");
+			String nome = mapa.get("nomeUsuario");
+
+			Lance lance = new Lance(new Usuario(nome), new BigDecimal(valor));
+			lista.add(lance);
+		}
 	}
 
 	
