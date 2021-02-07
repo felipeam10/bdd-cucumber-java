@@ -52,7 +52,7 @@ public class LanceServiceTest {
         }
     }
 
-	@BeforeEach
+	@BeforeEach //no Junit5 agora eh o @BeforeEach antes no Junit4 era apenas @Before
 	public void setUp() {
 		long leilaoId = 1l;
 		lanceDto = new NovoLanceDto();
